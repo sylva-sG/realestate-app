@@ -9,3 +9,7 @@ function PropertyList({ properties, filters }) {
       const matchesMinPrice = filters.minPrice
       ? property.price >= parseInt(filters.minPrice)
       : true;
+
+      const matchesMaxPrice = filters.maxPrice
+      ? property.price <= parseInt(filters.maxPrice)
+      : true;
