@@ -5,3 +5,7 @@ function PropertyList({ properties, filters }) {
     const matchesLocation = filters.location
       ? property.location.toLowerCase().includes(filters.location.toLowerCase())
       : true;
+
+      const matchesMinPrice = filters.minPrice
+      ? property.price >= parseInt(filters.minPrice)
+      : true;
