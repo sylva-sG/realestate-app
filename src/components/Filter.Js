@@ -7,3 +7,10 @@ function Filter({ onFilterChange }) {
     maxPrice: "",
     type: ""
   });
+
+   const handleChange = (e) => {
+    const { name, value } = e.target;
+    const newFilters = { ...filters, [name]: value };
+    setFilters(newFilters);
+    onFilterChange(newFilters); // send filters to parent
+  };
