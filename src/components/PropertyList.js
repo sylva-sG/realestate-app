@@ -13,3 +13,7 @@ function PropertyList({ properties, filters }) {
       const matchesMaxPrice = filters.maxPrice
       ? property.price <= parseInt(filters.maxPrice)
       : true;
+
+      const matchesType = filters.type
+      ? property.type === filters.type
+      : true;
