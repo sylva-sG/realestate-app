@@ -14,3 +14,13 @@ function Filter({ onFilterChange }) {
     setFilters(newFilters);
     onFilterChange(newFilters); // send filters to parent
   };
+
+  return (
+    <div className="filter">
+      <input
+        type="text"
+        name="location"
+        placeholder="Location"
+        value={filters.location}
+        onChange={handleChange}
+      />
