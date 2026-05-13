@@ -13,15 +13,19 @@
     />
 
     <select className="border p-3 rounded-lg">
-      <option>Apartment</option>
-      <option>Villa</option>
-      <option>Bungalow</option>
+      <option>cozy apartment</option>
+      <option>spacious house</option>
+      <option>vacant land</option>
+        <option>modern apartment</option>
+        <option>luxury house</option>
     </select>
 
     <select className="border p-3 rounded-lg">
-      <option>Any Price</option>
-      <option>Under 50k</option>
-      <option>50k - 100k</option>
+      <option>1200</option>
+      <option>2500</option>
+      <option>1500</option>
+      <option>3500</option>
+      <option>50000</option>
     </select>
 
     <button className="bg-slate-900 text-white rounded-lg">
