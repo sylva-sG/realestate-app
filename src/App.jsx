@@ -5,6 +5,8 @@ import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Properties from './pages/Properties'
 import Navbar from './components/Navbar'
+import About from './pages/About'
+import Home from './pages/Home'
 import './App.css'
 
 
@@ -35,16 +37,15 @@ function App() {
 
     <Routes>
 
-        <Route
-          path="/"
-          element={<Hero />}
-        />
+        
 
         <Route
           path="/properties"
           element={<Properties properties={properties} />}
+          
         />
-
+         <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
 
     </Routes>
     <Navbar />
