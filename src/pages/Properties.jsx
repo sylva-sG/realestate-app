@@ -1,18 +1,28 @@
-import PropertyList from "../components/PropertyList";
+import { useState } from "react";
 import Filter from "../components/Filter";
+import PropertyList from "../components/PropertyList";
 
-function Properties({ properties, filters }) {
+export default function Properties({ properties }) {
+
+  const [filters, setFilters] = useState({
+    location: "",
+    minPrice: "",
+    maxPrice: "",
+    type: ""
+  });
+
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>Available Properties</h1>
-      
+    <div style={{ padding: "30px" }}>
+
+      <h1>Properties</h1>
+
+      <Filter onFilterChange={setFilters} />
 
       <PropertyList
         properties={properties}
         filters={filters}
       />
+
     </div>
   );
 }
-
-export default Properties;

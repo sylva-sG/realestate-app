@@ -1,8 +1,10 @@
+import Navbar from './Navbar'
 import "../Hero.css";
 import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="hero">
+    
       <div className="overlay">
         <div className="content">
           <h1>Find Your Dream Home</h1>

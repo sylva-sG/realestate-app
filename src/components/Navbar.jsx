@@ -1,23 +1,17 @@
+import { Link } from "react-router-dom";
+import "../Navbar.css";
 
-<nav className="bg-white shadow-md px-8 py-4 flex justify-between items-center">
+function Navbar() {
+  return (
+    <nav className="navbar">
+    
+      <div className="links">
+        <Link to="/">Home</Link>
+        <Link to="/properties">Properties</Link>
+        <Link to="/about">About</Link>
+      </div>
+    </nav>
+  );
+}
 
-  {/* Logo */}
-  <h1 className="text-2xl font-bold text-slate-900">
- RealEstate Hub
-  </h1>
-    {/* Navigation Links */}
-  <div className="flex gap-6 text-gray-700 font-medium">
-    <a href="/">Home</a>
-    <a href="/properties">Properties</a>
-    <a href="/favorites">Favorites</a>
-    <a href="/add">Add Property</a>
-  </div>
-
-  {/* Icons */}
-  <div className="flex gap-4 items-center">
-    <button>search</button>
-
-    <div className="w-10 h-10 bg-slate-900 rounded-full"></div>
-  </div>
-
-</nav>
+export default Navbar;
