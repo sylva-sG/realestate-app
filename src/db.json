@@ -1,0 +1,12 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Modern Apartment",
+      "price": 1200,
+      "location": "Nairobi",
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      "description": "Beautiful apartment"
+    }
+  ]
+}
