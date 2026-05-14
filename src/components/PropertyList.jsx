@@ -26,6 +26,19 @@ function PropertyList({ properties, filters }) {
       {filteredProperties.length > 0 ? (
         filteredProperties.map((property) => (
           <div key={property.id} className="property-card">
+            {property.image && (
+              <img
+                src={property.image}
+                alt={property.title}
+                style={{
+                  width: '100%',
+                  height: '220px',
+                  objectFit: 'cover',
+                  borderRadius: '18px',
+                  marginBottom: '16px',
+                }}
+              />
+            )}
             <h3>{property.title}</h3>
             <p>{property.location}</p>
             <p>${property.price}</p>
