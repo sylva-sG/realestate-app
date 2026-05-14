@@ -54,7 +54,7 @@ Route	Description
 /	Home page (Hero section)
 /properties	Properties page with filters
 
-## 🧠 How It Works
+##  How It Works
 
 - Property data is stored in state inside `App.jsx`
 - The `Filter` component updates the filter state based on user input
@@ -64,7 +64,7 @@ Route	Description
 
 ---
 
-## 📸 UI Components
+##  UI Components
 
 - **Navbar** → Navigation links between pages
 - **Hero** → Landing section with a call-to-action button
