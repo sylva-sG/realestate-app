@@ -1,0 +1,165 @@
+	
+  {
+    "properties": [
+        {
+    "id": 1,
+    "title": "Beach House",
+    "location": "Guanaja",
+    "price": 203389,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 2,
+    "title": "Cozy Apartment",
+    "location": "Bungkulan",
+    "price": 166207,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 3,
+    "title": "Cozy Apartment",
+    "location": "San Matías",
+    "price": 415573,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 4,
+    "title": "Family Home",
+    "location": "Mlawe",
+    "price": 62226,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 5,
+    "title": "Beach House",
+    "location": "Weichanglu",
+    "price": 59022,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 6,
+    "title": "Penthouse Suite",
+    "location": "Libice nad Cidlinou",
+    "price": 483894,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 7,
+    "title": "Country Villa",
+    "location": "Ketapang",
+    "price": 496787,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 8,
+    "title": "Urban Loft",
+    "location": "Aţ Ţawāḩīn",
+    "price": 336435,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 9,
+    "title": "Country Villa",
+    "location": "Kuala Lumpur",
+    "price": 141947,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 10,
+    "title": "Modern Apartment",
+    "location": "Sanying",
+    "price": 128266,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 11,
+    "title": "Family Home",
+    "location": "Nancy",
+    "price": 179961,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 12,
+    "title": "Studio Apartment",
+    "location": "Charyshskoye",
+    "price": 98993,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 13,
+    "title": "Cozy Apartment",
+    "location": "Church End",
+    "price": 332072,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 14,
+    "title": "Modern Apartment",
+    "location": "Agusan",
+    "price": 275885,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 15,
+    "title": "Vacant Land",
+    "location": "Apeldoorn",
+    "price": 335499,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 16,
+    "title": "Studio Apartment",
+    "location": "Shalamzār",
+    "price": 413101,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 17,
+    "title": "Urban Loft",
+    "location": "Sankt Lorenzen im Mürztal",
+    "price": 73564,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 18,
+    "title": "Penthouse Suite",
+    "location": "Severnoye",
+    "price": 408160,
+    "type": "Apartment",
+    "image": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 19,
+    "title": "Studio Apartment",
+    "location": "Plužine",
+    "price": 73214,
+    "type": "Land",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "id": 20,
+    "title": "Family Home",
+    "location": "Isdalstø",
+    "price": 70803,
+    "type": "House",
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+  }
+]
+  }
