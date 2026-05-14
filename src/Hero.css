@@ -62,10 +62,10 @@
 }
 
 .secondary-btn {
-  background-color: white;
-  color: black;
+  background-color:black;
+  color: white;
 }
 
 .secondary-btn:hover {
-  background-color: #ddd;
+  background-color:black;
 }
