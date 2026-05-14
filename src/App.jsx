@@ -4,6 +4,7 @@ import PropertyList from './components/PropertyList'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import Properties from './pages/Properties'
+import About from './pages/About'
 import Navbar from './components/Navbar'
 import './App.css'
 
@@ -45,6 +46,10 @@ function App() {
           element={<Properties properties={properties} />}
         />
 
+        <Route
+          path="/about"
+          element={<About />}
+        />
 
     </Routes>
     <Navbar />
