@@ -24,7 +24,7 @@ function App() {
       id: 1,
       title: "Cozy Apartment",
       location: "New York",
-      price: 1200,
+      price: 120000,
       type: "apartment",
       image:
         "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
@@ -33,7 +33,7 @@ function App() {
       id: 2,
       title: "Spacious House",
       location: "Los Angeles",
-      price: 2500,
+      price: 250000,
       type: "house",
       image:
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
@@ -51,7 +51,7 @@ function App() {
       id: 4,
       title: "Modern Apartment",
       location: "Chicago",
-      price: 1500,
+      price: 150000,
       type: "apartment",
       image:
         "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80",
@@ -60,7 +60,7 @@ function App() {
       id: 5,
       title: "Luxury House",
       location: "Miami",
-      price: 3500,
+      price: 350000,
       type: "house",
       image:
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
