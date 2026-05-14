@@ -21,7 +21,7 @@ function About() {
         </div>
 
         <div className="about-card">
-          <h2>Smart Search</h2>
+          <h2>Smart Home Search</h2>
           <p>
             Filter by location, price, and property type to narrow down the best
             matches quickly and easily.
