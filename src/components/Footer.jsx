@@ -5,7 +5,7 @@ function Footer() {
 <footer className="footer">
   <div className="footer-content">
     <div>
-      <h3>Zion Estates</h3>
+      <h3>RealEstate Hub</h3>
       <p>Find your dream home anywhere, anytime.</p>
     </div>
 
@@ -19,13 +19,13 @@ function Footer() {
 
     <div>
       <h4>Contact</h4>
-      <p>Email: info@zionestates.com</p>
+      <p>Email: info@Realestates.com</p>
       <p>Phone: +254 700 000 000</p>
     </div>
   </div>
 
   <p className="copyright">
-    © 2026 Zion Estates. All rights reserved.
+    © 2026 RealEstate Hub. All rights reserved.
   </p>
 </footer>
     );

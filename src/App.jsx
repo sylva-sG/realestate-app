@@ -1,10 +1,13 @@
-import { Routes, Router } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
-import Filter from './components/Filter'
 import PropertyList from './components/PropertyList'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import Properties from './pages/Properties'
+import Navbar from './components/Navbar'
 import './App.css'
+
+
 
 function App() {   
  
@@ -26,13 +29,29 @@ function App() {
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
   }
-  return (
+ return (
+  
   <div className="App">
-    <Hero />
-    <Filter onFilterChange={handleFilterChange} />
-    <PropertyList properties={properties} filters={filters} />
+
+    <Routes>
+
+        <Route
+          path="/"
+          element={<Hero />}
+        />
+
+        <Route
+          path="/properties"
+          element={<Properties properties={properties} />}
+        />
+
+
+    </Routes>
+    <Navbar />
+
     <Footer />
+
   </div>
-  );
+);
 } 
 export default App

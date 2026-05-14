@@ -1,8 +1,10 @@
+import Navbar from './Navbar'
 import "../Hero.css";
-
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="hero">
+    
       <div className="overlay">
         <div className="content">
           <h1>Find Your Dream Home</h1>
@@ -12,7 +14,7 @@ function Hero() {
           </p>
 
           <div className="buttons">
-            <button className="primary-btn">Explore Properties</button>
+           <Link to="/properties"> <button className="primary-btn">Explore Properties</button> </Link>
             <button className="secondary-btn">Learn More</button>
           </div>
         </div>
