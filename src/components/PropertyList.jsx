@@ -1,9 +1,18 @@
-import React from "react";
+// components/PropertyList.jsx
 
-function PropertyList({ properties, filters }) {
+function PropertyList({
+  properties,
+  filters,
+  deleteProperty,
+  editProperty,
+}) {
+
   const filteredProperties = properties.filter((property) => {
+
     const matchesLocation = filters.location
-      ? property.location.toLowerCase().includes(filters.location.toLowerCase())
+      ? property.location
+          .toLowerCase()
+          .includes(filters.location.toLowerCase())
       : true;
 
     const matchesMinPrice = filters.minPrice
@@ -15,38 +24,61 @@ function PropertyList({ properties, filters }) {
       : true;
 
     const matchesType = filters.type
-      ? property.type === filters.type
+      ? property.type
+          .toLowerCase()
+          .includes(filters.type.toLowerCase())
       : true;
 
-    return matchesLocation && matchesMinPrice && matchesMaxPrice && matchesType;
+    return (
+      matchesLocation &&
+      matchesMinPrice &&
+      matchesMaxPrice &&
+      matchesType
+    );
   });
 
   return (
     <div className="property-list">
-      {filteredProperties.length > 0 ? (
-        filteredProperties.map((property) => (
-          <div key={property.id} className="property-card">
 
-            {property.image && (
-              <img
-                src={property.image}
-                alt={property.title}
-                className="property-image"
-              />
-            )}
+      {filteredProperties.map((property) => (
 
-            <div className="property-content">
-              <h3 className="property-title">{property.title}</h3>
-              <p className="property-text">{property.location}</p>
-              <p className="property-price">${property.price}</p>
-              <p className="property-text">Type: {property.type}</p>
-            </div>
+        <div className="property-card" key={property.id}>
+
+          <img
+            src={property.image}
+            alt={property.title}
+            className="property-image"
+          />
+
+          <h2>{property.title}</h2>
+
+          <p>{property.location}</p>
+
+          <p>Ksh {property.price}</p>
+
+          <p>{property.type}</p>
+
+          <div className="property-buttons">
+
+            <button
+              className="edit-btn"
+              onClick={() => editProperty(property)}
+            >
+              Edit
+            </button>
+
+            <button
+              className="delete-btn"
+              onClick={() => deleteProperty(property.id)}
+            >
+              Delete
+            </button>
 
           </div>
-        ))
-      ) : (
-        <p>No properties match your filters.</p>
-      )}
+
+        </div>
+      ))}
+
     </div>
   );
 }

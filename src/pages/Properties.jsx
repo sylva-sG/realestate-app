@@ -1,28 +1,43 @@
-import { useState } from "react";
+// pages/Properties.jsx
+
 import Filter from "../components/Filter";
 import PropertyList from "../components/PropertyList";
+import PropertyForm from "../components/PropertyForm";
 
-export default function Properties({ properties }) {
-
-  const [filters, setFilters] = useState({
-    location: "",
-    minPrice: "",
-    maxPrice: "",
-    type: ""
-  });
-
+function Properties({
+  properties,
+  filters,
+  onFilterChange,
+  addProperty,
+  deleteProperty,
+  editProperty,
+  updateProperty,
+  editingProperty,
+}) {
   return (
-    <div style={{ padding: "30px" }}>
+    <div className="properties-page">
 
-      <h1>Properties</h1>
+      <h1 className="properties-title">
+        Available Properties
+      </h1>
 
-      <Filter onFilterChange={setFilters} />
+      <PropertyForm
+        addProperty={addProperty}
+        editingProperty={editingProperty}
+        updateProperty={updateProperty}
+      />
+
+      <Filter onFilterChange={onFilterChange} />
 
       <PropertyList
         properties={properties}
         filters={filters}
+        deleteProperty={deleteProperty}
+        editProperty={editProperty}
       />
 
     </div>
   );
 }
+
+export default Properties;
