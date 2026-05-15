@@ -5,18 +5,24 @@ function Filter({ onFilterChange }) {
     location: "",
     minPrice: "",
     maxPrice: "",
-    type: ""
+    type: "",
   });
 
-   const handleChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    const newFilters = { ...filters, [name]: value };
+
+    const newFilters = {
+      ...filters,
+      [name]: value,
+    };
+
     setFilters(newFilters);
-    onFilterChange(newFilters); // send filters to parent
+    onFilterChange(newFilters);
   };
 
   return (
     <div className="filter">
+      {/* Location */}
       <input
         type="text"
         name="location"
@@ -25,6 +31,7 @@ function Filter({ onFilterChange }) {
         onChange={handleChange}
       />
 
+      {/* Minimum Price */}
       <input
         type="number"
         name="minPrice"
@@ -32,6 +39,8 @@ function Filter({ onFilterChange }) {
         value={filters.minPrice}
         onChange={handleChange}
       />
+
+      {/* Maximum Price */}
       <input
         type="number"
         name="maxPrice"
@@ -39,11 +48,17 @@ function Filter({ onFilterChange }) {
         value={filters.maxPrice}
         onChange={handleChange}
       />
-      <select name="type" value={filters.type} onChange={handleChange}>
+
+      {/* Property Type */}
+      <select
+        name="type"
+        value={filters.type}
+        onChange={handleChange}
+      >
         <option value="">All Types</option>
-        <option value="apartment">Apartment</option>
-        <option value="house">House</option>
-        <option value="land">Land</option>
+        <option value="Apartment">Apartment</option>
+        <option value="House">House</option>
+        <option value="Land">Land</option>
       </select>
     </div>
   );
