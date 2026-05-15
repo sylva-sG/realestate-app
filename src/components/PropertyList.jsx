@@ -6,19 +6,19 @@ function PropertyList({ properties, filters }) {
       ? property.location.toLowerCase().includes(filters.location.toLowerCase())
       : true;
 
-      const matchesMinPrice = filters.minPrice
+    const matchesMinPrice = filters.minPrice
       ? property.price >= parseInt(filters.minPrice)
       : true;
 
-      const matchesMaxPrice = filters.maxPrice
+    const matchesMaxPrice = filters.maxPrice
       ? property.price <= parseInt(filters.maxPrice)
       : true;
 
-      const matchesType = filters.type
+    const matchesType = filters.type
       ? property.type === filters.type
       : true;
 
-        return matchesLocation && matchesMinPrice && matchesMaxPrice && matchesType;
+    return matchesLocation && matchesMinPrice && matchesMaxPrice && matchesType;
   });
 
   return (
@@ -26,23 +26,22 @@ function PropertyList({ properties, filters }) {
       {filteredProperties.length > 0 ? (
         filteredProperties.map((property) => (
           <div key={property.id} className="property-card">
+
             {property.image && (
               <img
                 src={property.image}
                 alt={property.title}
-                style={{
-                  width: '100%',
-                  height: '220px',
-                  objectFit: 'cover',
-                  borderRadius: '18px',
-                  marginBottom: '16px',
-                }}
+                className="property-image"
               />
             )}
-            <h3>{property.title}</h3>
-            <p>{property.location}</p>
-            <p>${property.price}</p>
-            <p>Type: {property.type}</p>
+
+            <div className="property-content">
+              <h3 className="property-title">{property.title}</h3>
+              <p className="property-text">{property.location}</p>
+              <p className="property-price">${property.price}</p>
+              <p className="property-text">Type: {property.type}</p>
+            </div>
+
           </div>
         ))
       ) : (
