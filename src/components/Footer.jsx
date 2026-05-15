@@ -10,11 +10,11 @@ function Footer() {
     </div>
 
     <div>
-      <h4>Quick Links</h4>
+      <h4>visit</h4>
       <p><Link to="/">Home</Link></p>
       <p><Link to="/properties">Properties</Link></p>
       <p><Link to="/about">About</Link></p>
-      <p><Link to="/contact">Contact</Link></p>
+      <p><Link to="/contact">Contact Us</Link></p>
     </div>
 
     <div>
