@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 
+<<<<<<< HEAD
 export default function Home() {
   return (
     <div>
@@ -18,3 +19,16 @@ export default function Home() {
     </div>
   );
 }
+=======
+function Home() {
+  return (
+    <div>
+      <Hero />
+
+      
+    </div>
+  );
+}
+
+export default Home;
+>>>>>>> master

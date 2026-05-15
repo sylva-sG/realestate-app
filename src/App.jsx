@@ -1,57 +1,111 @@
-import { Routes, Route } from 'react-router-dom'
-import { useState } from 'react'
-import PropertyList from './components/PropertyList'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import Properties from './pages/Properties'
-import Navbar from './components/Navbar'
-import './App.css'
+// App.jsx
 
+import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-function App() {   
- 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Properties from "./pages/Properties";
+
+import "./App.css";
+
+function App() {
+
   const [filters, setFilters] = useState({
     location: "",
     minPrice: "",
     maxPrice: "",
-    type: ""
+    type: "",
   });
 
-  const properties = [
-    { id: 1, title: "Cozy Apartment", location: "New York", price: 1200, type: "apartment" },
-    { id: 2, title: "Spacious House", location: "Los Angeles", price: 2500, type: "house" },
-    { id: 3, title: "Vacant Land", location: "Austin", price: 50000, type: "land" },
-    { id: 4, title: "Modern Apartment", location: "Chicago", price: 1500, type: "apartment" },
-    { id: 5, title: "Luxury House", location: "Miami", price: 3500, type: "house" }
-  ];
+  const [properties, setProperties] = useState([]);
+
+  const [editingProperty, setEditingProperty] = useState(null);
+
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/sylva-sG/realestate-app/master/db.json"
+    )
+      .then((res) => res.json())
+      .then((data) => setProperties(data.properties))
+      .catch((err) => console.log(err));
+  }, []);
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
-  }
- return (
-  
-  <div className="App">
+  };
 
-    <Routes>
+  // CREATE
+  const addProperty = (property) => {
+    const newProperty = {
+      ...property,
+      id: Date.now(),
+    };
 
-        <Route
-          path="/"
-          element={<Hero />}
-        />
+    setProperties([...properties, newProperty]);
+  };
+
+  // DELETE
+  const deleteProperty = (id) => {
+    setProperties(
+      properties.filter((property) => property.id !== id)
+    );
+  };
+
+  // EDIT
+  const editProperty = (property) => {
+    setEditingProperty(property);
+  };
+
+  // UPDATE
+  const updateProperty = (updatedProperty) => {
+    setProperties(
+      properties.map((property) =>
+        property.id === updatedProperty.id
+          ? updatedProperty
+          : property
+      )
+    );
+
+    setEditingProperty(null);
+  };
+
+  return (
+    <div className="App">
+
+      <Navbar />
+
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/about" element={<About />} />
 
         <Route
           path="/properties"
-          element={<Properties properties={properties} />}
+          element={
+            <Properties
+              properties={properties}
+              filters={filters}
+              onFilterChange={handleFilterChange}
+              addProperty={addProperty}
+              deleteProperty={deleteProperty}
+              editProperty={editProperty}
+              updateProperty={updateProperty}
+              editingProperty={editingProperty}
+            />
+          }
         />
 
+      </Routes>
 
-    </Routes>
-    <Navbar />
+      <Footer />
 
-    <Footer />
+    </div>
+  );
+}
 
-  </div>
-);
-} 
-export default App
+export default App;
