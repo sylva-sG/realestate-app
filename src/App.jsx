@@ -23,11 +23,11 @@ function App() {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/properties")
-      .then((response) => response.json())
-      .then((data) => setProperties(data))
-      .catch((error) => console.log(error));
-  }, []);
+  fetch("https://raw.githubusercontent.com/sylva-sG/realestate-app/master/db.json")
+    .then(res => res.json())
+    .then(data => setProperties(data.properties))
+    .catch(err => console.log(err));
+}, []);
 
   const handleFilterChange = (newFilters) => {
     setFilters(newFilters);
